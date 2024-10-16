@@ -1,0 +1,28 @@
+---
+
+spring:
+  main:
+    banner-mode: "off"
+  profiles:
+    active: production
+
+server:
+  port: 8080
+  servlet:
+    application-display-name: library-management-application
+    context-path: /library-api
+
+logging:
+  level:
+    root: INFO
+  pattern:
+    console: "%d{dd-MM-yyyy HH:mm:ss.SSS} %magenta([%thread]) %highlight(%-5level) %logger.%M - %msg%n"
+
+management:
+  endpoints:
+    enabled-by-default: false
+    web.base-path: /
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
