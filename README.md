@@ -27,35 +27,35 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -d '{"isbn": "123","title": "title","author": "auth", "publicationYear": 2024, "availableCopies": 10}'
 ```
-2. remove a book
+2. remove a book DELETE: /library-api/v1/books/{isbn}
 ```
 curl -X DELETE \
   http://localhost:8080/library-api/v1/books/123 \
   -H 'Accept: application/json' \
   -H 'Content-Type: application/json'
 ```
-3. findBookByISBN
+3. findBookByISBN GET: /library-api/v1/books/{isbn}
 ```
 curl -X GET \
   http://localhost:8080/library-api/v1/books/123 \
   -H 'Accept: application/json' \
   -H 'Content-Type: application/json'
 ```
-4. findBooksByAuthor
+4. findBooksByAuthor GET: /library-api/v1/books?author={author}
 ```
 curl -X GET \
   http://localhost:8080/library-api/v1/books?author=auth \
   -H 'Accept: application/json' \
   -H 'Content-Type: application/json'
 ```
-5. borrowBook
+5. borrowBook PUT: /library-api/v1/books/{isbn}/borrow
 ```
 curl -X PUT \
   http://localhost:8080/library-api/v1/books/123/borrow \
   -H 'Accept: application/json' \
   -H 'Content-Type: application/json'
 ```
-6. returnBook
+6. returnBook PUT: /library-api/v1/books/{isbn}/return
 ```
 curl -X PUT \
   http://localhost:8080/library-api/v1/books/123/return \
