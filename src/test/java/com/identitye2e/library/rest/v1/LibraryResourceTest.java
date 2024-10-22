@@ -63,7 +63,7 @@ class LibraryResourceTest {
 
     @ParameterizedTest
     @MethodSource("invalidFieldsForBookRequests")
-    void roundUpByDuration_InvalidFieldsForARoundUpRequest_ThrowConstraintViolationException(BookRequest bookRequest) {
+    void roundUpByDuration_InvalidFieldsForABookRequest_ThrowConstraintViolationException(BookRequest bookRequest) {
         assertThrows(ConstraintViolationException.class, () -> testObj.createBook(bookRequest));
     }
 
