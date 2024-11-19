@@ -7,12 +7,12 @@ Will need Maven and Java 21 installed
 Either with maven spring-boot plugin
 
 ```
-mvn spring-boot:run
+./gradlew bootRun
 ```
 Or building/running the jar<br />
 ```
-mvn clean install
-java -jar target/library-management-1.0-0.jar
+./gradlew clean build
+java -jar build/libs/payment-gateway-challenge-java-0.0.1-SNAPSHOT.jar
 ```
 To see if the application is up and running
 ```
